@@ -1,0 +1,69 @@
+
+.App-header {
+  margin: 40px 100px 30px 100px;
+}  
+.App-header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.App-header-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.App-header-nav-a {
+  font-family: 'Montserrat';
+  text-decoration: none;
+  font-style: normal;
+  font-size: 24px;
+  color: #FF6060;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.App-header-nav-a:hover {
+  font-family: 'Montserrat';
+  text-decoration: none;
+  font-style: normal;
+  font-size: 24px;
+  color: #FF6060;
+}
+
+.active {
+  text-decoration-style: solid;
+  text-decoration: underline;
+}
+.active:hover{
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
+
+@media screen and (max-width: 760px) {
+  .App-header {
+    margin: 10px;
+  }  
+  .App-header-ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style-type: none;
+  }
+  .App-header-nav-a {
+    font-family: 'Montserrat';
+    text-decoration: none;
+    font-style: normal;
+    font-size: 16px;
+    color: #FF6060;
+  }
+  .App-header-nav-a:hover {
+    font-family: 'Montserrat';
+    text-decoration: none;
+    font-style: normal;
+    font-size: 16px;
+    color: #FF6060;
+  }
+}

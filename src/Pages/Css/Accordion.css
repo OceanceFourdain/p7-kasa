@@ -1,0 +1,156 @@
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    * {
+        font-family: 'Montserrat', Helvetica, sans-serif;
+    }
+    .flex-container {
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0 1em;
+    }
+    
+    @media(min-width:540px) {
+        .flex-container {
+            max-width: 540px;
+        }
+    }
+    
+    @media(min-width:768px) {
+        .flex-container {
+            max-width: 768px;
+        }
+    }
+    
+    @media(min-width:992px) {
+        .flex-container {
+            max-width: 992px;
+        }
+    }
+    
+    @media(min-width:1200px) {
+        .flex-container {
+            max-width: 1200px;
+        }
+    }
+    
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        margin-bottom: 1em;
+    }
+    
+    .flex-row {
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        margin-bottom: 1em;
+    }
+    
+    @media(min-width:992px) {
+        
+    }
+    
+    /*ACCORION 1*/
+    
+    .accordion {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    input[type="radio"] {
+        position: absolute;
+        left: -9999px;
+    }
+    
+    .accordion label {
+        text-align: center;
+    }
+    
+    .accordion li,
+    .accordion .accordion-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    
+    .accordion .accordion-title {
+        margin: 0;
+        border-radius: 5px;
+        color: white;
+        
+    }
+    
+    .accordion li {
+        margin-bottom: 33px;
+        background-color: #F7F7F7;
+        border-radius: 0px 0px 5px 5px;
+    }
+    
+    .accordion .accordion-heading {
+        text-decoration: none;
+        background-color: #FF6060;
+        height: 47px;
+        font-size: 24px;
+        padding: 5px 15px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%;
+        border-radius: 5px;
+        color: white;
+    }
+    
+    .accordion .accordion-heading:before {
+        content: url("../../img/Vector_bas.png");
+        float: right;
+        margin-right: 15px;
+        padding: 6px 10px;
+        font-size: 20px;
+        color: #fff;
+    }
+    
+    .accordion .accordion-content {
+        display: none;
+        position: relative;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 30px;
+        color: #FF6060;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-size: 22px;
+        line-height: 142.6%;
+        transiton: all .5s;
+    }
+    
+    
+    
+    [value="Panel_1"]:checked ~ .accordion [data-radio="Panel_1"],
+    [value="Panel_2"]:checked ~ .accordion [data-radio="Panel_2"],
+    [value="Panel_3"]:checked ~ .accordion [data-radio="Panel_3"],
+    [value="Panel_4"]:checked ~ .accordion [data-radio="Panel_4"] {
+        flex-grow: 1;
+    }
+    
+    [value="Panel_1"]:checked ~ .accordion [for="Panel_1"] + .accordion-content,
+    [value="Panel_2"]:checked ~ .accordion [for="Panel_2"] + .accordion-content,
+    [value="Panel_3"]:checked ~ .accordion [for="Panel_3"] + .accordion-content,
+    [value="Panel_4"]:checked ~ .accordion [for="Panel_4"] + .accordion-content {
+        display: flex;
+    }
+    
+    [value="Panel_1"]:checked ~ .accordion [data-radio="Panel_1"] .accordion-heading:before,
+    [value="Panel_2"]:checked ~ .accordion [data-radio="Panel_2"] .accordion-heading:before,
+    [value="Panel_3"]:checked ~ .accordion [data-radio="Panel_3"] .accordion-heading:before,
+    [value="Panel_4"]:checked ~ .accordion [data-radio="Panel_4"] .accordion-heading:before {
+        content: url("../../img/Vector_haut.png");
+        float: right;
+        margin-right: 15px;
+        padding: 6px 10px;
+        font-size: 20px;
+        color: #fff;
+    }
