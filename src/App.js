@@ -2,13 +2,13 @@ import React, { useEffect, useState} from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import './App.css';
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Logement from './Pages/Logements';
-import Error from './Pages/404';
+import Home from './Pages/Home/Home';
+import About from './Pages/About/About';
+import Logement from './Pages/Logements/Logements';
+import Error from './Pages/404/404';
 
-import Header from './Pages/Assets/Header';
-import Footer from './Pages/Assets/Footer';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
 import reportWebVitals from './reportWebVitals';
 import { AppContext } from "./AppContext";
 import dataLogement from "./data/logements.json";
